@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Embed Preview</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "htm/": "https://esm.sh/htm@3.1.1/",
+      "preact/": "https://esm.sh/preact@10.15.1/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <div class="panel">
+      <div class="controls">
+        <label>
+          Width
+          <input id="width" type="range" min="200" max="1000" value="400" />
+          <span id="widthVal">400</span>px
+        </label>
+        <label>
+          Height
+          <input id="height" type="range" min="120" max="800" value="200" />
+          <span id="heightVal">200</span>px
+        </label>
+        <button id="copyBtn" aria-label="Copy embed code">Copy embed</button>
+        <button id="downloadBtn" aria-label="Download HTML">Download HTML</button>
+      </div>
+
+      <div class="previewWrap" role="region" aria-label="Embed preview">
+        <iframe id="embedFrame"
+          src="https://skillslap.com/skill/0de22497-b08e-425b-9314-d2e0cad18d0b/embed"
+          title="SkillSlap Skill: SkillSlap Queue Processor"
+          style="border:none;border-radius:12px;"
+          width="400" height="200" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+
+      <textarea id="embedCode" readonly rows="4"></textarea>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
